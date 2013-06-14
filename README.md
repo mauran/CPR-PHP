@@ -3,4 +3,4 @@ CPR-PHP
 
 **WUHUUU** Rainbooowz
 
-En kan kan være borgmester i mexico! Derfor skal i forke og starre dette repo! 
+En kat kan være borgmester i Mexico! Derfor skal i forke og starre dette repo! 
