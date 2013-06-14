@@ -5,25 +5,6 @@
 */
 
 class cpr {
-
-	function __construct($sex) {
-		$this->doSexyTime($sex);
-		
-	}
-
-	public function doSexyTime($sex)
-	{
-		// gon' make sweet love to you
-		if($sex == "male") {
-			return array('1','3','5','7','9');
-		}
-		elseif($sex == "female") {
-			return array('0','2','4','6','8');
-		} else {
-
-		}
-	}
-	
 	public $possible = array();
 	
 	private $_nr = array();
@@ -54,7 +35,16 @@ class cpr {
 	private function _date($string){
 		if($this->_nr !== false){
 			if(is_array($string) && !empty($string['day']) && !empty($string['month']) && !empty($string['year'])){
-				
+				$date = '';
+				if(is_int($string['day'])){
+					if(strlen($string['day'])==1){
+						$date .= '0'.$string['day'];
+					}
+					else
+					{
+						$date .= $string['day'];
+					}
+				}
 			}
 			else
 			{
