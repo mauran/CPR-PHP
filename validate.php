@@ -31,5 +31,5 @@ class cpr {
 
 
 $class = new cpr();
-
+//kage
 ?>
