@@ -1,24 +1,25 @@
 <?php
 /*
 @Author: Mauran Muthiah
-@Description: :))
+@Description: :)
 
 [1, 3, 5, 7, 9]
 */
 
 class cpr {
 
-	function __construct($gender) {
-		$this->gender($gender);
+	function __construct($sex) {
+		$this->doSexyTime($sex);
 		
 	}
 
-	public function gender($gender)
+	public function doSexyTime($sex)
 	{
-		if($gender == "male") {
+		// gon' make sweet love to you
+		if($sex == "male") {
 			return array('1','3','5','7','9');
 		}
-		elseif($gender == "female") {
+		elseif($sex == "female") {
 			return array('0','2','4','6','8');
 		} else {
 
@@ -31,5 +32,4 @@ class cpr {
 
 
 $class = new cpr();
-
 ?>
