@@ -32,6 +32,17 @@ class CPR {
 		
 		return (11 - $sum % 11);
 	}
+	
+	public function getCombinations($month, $day, $year)
+	{
+		$cpr = date('dmy', mktime(0, 0, 0, $month, $day, $year));
+		$combinations = array();
+		for($i = 0; $i < 999; $i++) {
+			$combinations[] = $cpr.$i.(self::getControlDigit($cpr.$i));
+		}
+		
+		return $combinations;
+	}
 
 }
 
@@ -49,3 +60,8 @@ if(CPR::check('1234567890')) {
 
 // Get control digit for a CPR-number
 echo 'The control digit for the CPR-number 123456789 is '.CPR::getControlDigit('123456789');
+
+// Get a list of possible CPR-numbers
+foreach(CPR::getCombinations(1, 1, 2011) as $cpr) {
+	echo 'A possible combination: '.$cpr;
+}
