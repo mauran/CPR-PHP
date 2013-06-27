@@ -1,6 +1,6 @@
 CPR-PHP
 =======
 
-**WUHUUU** Rainbooowz
+**Validate danish social security numbers**
 
-En kat kan være borgmester i Mexico! Derfor skal i forke og starre dette repo! 
+Feel free to use it. Thanks to Oliver Nordbjerg for making 99% of everything in this repo.
