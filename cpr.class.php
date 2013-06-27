@@ -21,6 +21,18 @@ class CPR {
 		return self::mod11($cpr);
 	}
 	
+	public function getControlDigit($cpr)
+	{
+		$control = array(4, 3, 2, 7, 6, 5, 4, 3, 2);
+		
+		$sum = 0;
+		for($i = 0; $i < 8; $i++) {
+			$sum += $cpr[$i] * $control[$i];
+		}
+		
+		return (11 - $sum % 11)
+	}
+	
 	private static function mod11($cpr)
 	{
 		$control = array(4, 3, 2, 7, 6, 5, 4, 3, 2);
@@ -40,8 +52,12 @@ class CPR {
  * THERE BE EXAMPLES
  * ----------------------------------------------------------------------------
  */
+// Validate CPR-number
 if(CPR::check('1234567890')) {
 	echo '1234567890 is a valid CPR-number.';
 } else {
 	echo '1234567890 is not a valid CPR-number.';
 }
+
+// Get control digit for a CPR-number
+echo 'The control digit for the CPR-number 123456789 is '.CPR::getControlDigit('123456789');
