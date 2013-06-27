@@ -11,8 +11,7 @@
 class cpr {
 
 	function __construct($gender) {
-		$this->gender($gender);
-		
+		$this->gender($gender);	
 	}
 
 	public function gender($gender)
@@ -22,16 +21,9 @@ class cpr {
 		}
 		elseif($gender == "female") {
 			return array('0','2','4','6','8');
-		} else {
-
 		}
 	}
 
-
-
 }
 
-
 $class = new cpr();
-
-?>
