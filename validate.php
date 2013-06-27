@@ -13,7 +13,7 @@ class CPR {
 	public static function check($cpr, $gender)
 	{
 		if(strlen($cpr) < 10) {
-			trigger_error("CPR-nummeret er ikke på 10 tegn");
+			trigger_error('The CPR-number is less than 10 digits.');
 			return;
 		}
 		
@@ -25,4 +25,15 @@ class CPR {
 		}
 	}
 
+}
+
+/*
+ * ----------------------------------------------------------------------------
+ * THERE BE EXAMPLES
+ * ----------------------------------------------------------------------------
+ */
+if(CPR::check('1234567890', 'f')) {
+	echo '1234567890 is a valid CPR-number.';
+} else {
+	echo '1234567890 is not a valid CPR-number.';
 }
