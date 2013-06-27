@@ -8,7 +8,7 @@
  * ----------------------------------------------------------------------------
  */
 
-class cpr {
+class CPR {
 
 	public static function check($cpr, $gender)
 	{
