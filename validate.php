@@ -17,10 +17,10 @@ class CPR {
 			return;
 		}
 		
-		if($gender == "male") {
+		if($gender == "male" || $gender == 'm') {
 			return in_array($cpr[9], array('1','3','5','7','9'));
 		}
-		elseif($gender == "female") {
+		elseif($gender == "female" || $gender == 'f') {
 			return in_array($cpr[9], array('0','2','4','6','8'));
 		}
 	}
