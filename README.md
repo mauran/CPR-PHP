@@ -1,6 +1,6 @@
 CPR-PHP
 =======
 
-**Validate danish social security numbers**
+**Validate Danish social security numbers**
 
-Feel free to use it. Thanks to Oliver Nordbjerg for making 99% of everything in this repo.
+Feel free to use it. Thanks to Oliver Nordbjerg (@nordbjerg) for making 99% of everything in this repo.
