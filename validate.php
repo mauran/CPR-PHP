@@ -9,21 +9,26 @@
  */
 
 class cpr {
+	
+	private $_cpr;
 
-	function __construct($gender) {
-		$this->gender($gender);	
+	function __construct($cpr) {
+		if(strlen($cpr) < 10) {
+			trigger_error("CPR-nummeret er ikke på 10 tegn");
+			return;
+		} else {
+			$this->_cpr = $cpr;
+		}
 	}
 
-	public function gender($gender)
+	public function check($gender)
 	{
 		if($gender == "male") {
-			return array('1','3','5','7','9');
+			return in_array($this->_cpr[9], array('1','3','5','7','9'));
 		}
 		elseif($gender == "female") {
-			return array('0','2','4','6','8');
+			return in_array($this->_cpr[9], array('0','2','4','6','8'));
 		}
 	}
 
 }
-
-$class = new cpr();
