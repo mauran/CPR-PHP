@@ -18,7 +18,7 @@ class CPR {
 			return;
 		}
 		
-		return self::mod11($cpr);
+		return self::getControlDigit($cpr) == $cpr[9];
 	}
 	
 	public function getControlDigit($cpr)
@@ -31,18 +31,6 @@ class CPR {
 		}
 		
 		return (11 - $sum % 11)
-	}
-	
-	private static function mod11($cpr)
-	{
-		$control = array(4, 3, 2, 7, 6, 5, 4, 3, 2);
-		
-		$sum = 0;
-		for($i = 0; $i < 8; $i++) {
-			$sum += $cpr[$i] * $control[$i];
-		}
-
-		return ((11 - $sum % 11) == $cpr[9]);
 	}
 
 }
