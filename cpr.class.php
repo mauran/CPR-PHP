@@ -30,7 +30,7 @@ class CPR {
 			$sum += $cpr[$i] * $control[$i];
 		}
 		
-		return (11 - $sum % 11)
+		return (11 - $sum % 11);
 	}
 
 }
